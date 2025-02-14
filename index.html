@@ -10,13 +10,16 @@ body {
     font-family: Arial, sans-serif;
     color: #333;
     position: relative;
-    min-height: 88vh;
-    background-image: url('images/background.webp');
+    min-height: 96vh;
+    background-color: #333;
+    background-image: url('/static/images/background.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: scroll;
     z-index: 0;
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
 
 body::before {
@@ -33,7 +36,6 @@ body::before {
     width: 102.5%;
 }
 
-
 h1 {
     font-size: 14px;
 }
@@ -49,7 +51,7 @@ h2 {
 }
 
 .loja-maps-text {
-    position:relative;
+    position: relative;
     left: 9%;
 }
 
@@ -63,50 +65,48 @@ a:hover {
 
 header {
     background-color: rgba(0, 0, 0, 1);
-    position: relative;
+    position: relative; 
+    left: 0;
     color: white;
-    padding: 2px 2px;
-    top: 0;
+    padding: 14px 18px;
     border-radius: 26px;
-    margin-bottom: -2%;
     text-align: center;
     align-items: center;
-    width: 98%;
-    z-index: 100;
+    width: 95%;
+    margin-bottom: 20px;
 }
 
 main {
     padding: 10px;
     text-align: center;
-    padding-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 160px); 
 }
 
 footer {
     position: relative; 
-    margin-top: 120px;
-    left: 0;
+    margin-top: auto; 
+    display: flex;
+    justify-content: center;
+    align-items: center;    
     background-color: rgba(0, 0, 0, 0.8);
     color: white;
     text-align: center;
-    padding: 1px 10px;
-    width: 98%;
-    bottom: 0;
+    padding: 12px 12px;
+    width: 100%;
     z-index: 0;
 }
 
-
 .bottom-place {
-    top: 75%;
-    left: 0%;
-    margin-left: -2%;
     background-color: rgba(0, 0, 0, 0.8);
     text-align: center;
     border-radius: 26px;
-}
-
-.bottom-text {
-    margin-top: 3%;
-    padding: 1px 1px;
+    padding: 10px;
+    width: 100%;           
+    max-width: 90%;         
+    margin: 0 auto;       
 }
 
 .modal-button a i {
@@ -120,7 +120,6 @@ footer {
 
 .modal-button {
     position: relative;
-    top: 35px;
     max-width: 250px;
     margin: 25px auto;
     padding: 20px;
@@ -138,6 +137,100 @@ footer {
     align-items: center;
 }
 
+@media (min-width: 1024px) {
+    body {
+        font-size: 16px;
+    }
+
+    header {
+        padding: 20px 50px;
+    }
+
+    .nome-topo {
+        font-size: 36px;
+    }
+
+    .bottom-place {
+        width: 40%;
+        top: 98%;
+    }
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+    body {
+        font-size: 15px;
+    }
+
+    header {
+        padding: 15px;
+    }
+
+    .nome-topo {
+        font-size: 30px;
+    }
+
+    .bottom-place {
+        width: 60%;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    header {
+        padding: 10px;
+    }
+
+    .nome-topo {
+        font-size: 28px;
+    }
+
+    .bottom-place {
+        width: 80%;
+    }
+
+    footer {
+        padding: 10px 5px;
+    }
+
+    .modal-button {
+        max-width: 200px;
+        margin: 20px auto;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 12px;
+        padding: 5px;
+    }
+
+    header {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .nome-topo {
+        font-size: 22px;
+    }
+
+    .bottom-place {
+        width: 90%;
+    }
+
+    footer {
+        padding: 8px 5px;
+    }
+
+    .modal-button {
+        max-width: 180px;
+        padding: 12px;
+    }
+}
 
     </style>
 
